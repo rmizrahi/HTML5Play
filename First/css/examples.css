@@ -1,0 +1,20 @@
+.redHeader {
+	color: red;
+	text-decoration:underline;
+	font-family: Arial,Helvetica,sans-serif;
+}
+p:first-of-type {
+	font-weight: bold;
+}
+a:hover {
+	color:green;
+}
+h1.pageheading {
+	text-align: center;
+}
+blockquote cite {
+	text-transform: uppercase;
+}
+body {
+	font-family: arial, helvetica, sans-serif;
+}
