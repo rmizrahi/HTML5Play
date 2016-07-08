@@ -6,6 +6,44 @@
 		<link rel="stylesheet" type="text/css" href="css/contacts.css"/>
 	</head>
 	<body>
+		<div id="header">Contacts</div>
+		<div id="contactDetails"><h2>Contact Details</h2>
+			<form method="post">
+				<div class="formRow">
+					<label for="contactName">Contact Name</label>
+					<input autofocus autocomplete="off" name="contactName" id="contactName" type="text"> </input>
+				</div>
+				<div class="formRow">
+					<label for="phoneNumber">Phone Number</label>
+					<input placeholder="Include Area Code" name="phoneNumber" id="phoneNumber" type="tel"></input>
+				</div>
+				<div class="formRow">
+					<label for="emailAddress">Email Address</label>
+					<input name="emailAddress" id="emailAddress" type="email"></input>
+				</div>
+				<div class="formRow">
+					<label for="companyName">Company Name</label>
+					<input list="companies" name="companyName" id="companyName">
+					<datalist id="companies">
+						<option value="ABC Incorporated"></option>
+						<option value="XZY Ltd"></option>
+						<option value="ACME iInternational"></option>
+					</input>
+				</div>
+				<div class="formRow">
+					<label for="notes">Notes</label>
+					<textarea cols="40" rows="6" name="notes"></textarea>
+				</div>
+				<div class="formRow">
+					<input style="width:70px" type="submit" value="Save"></input>
+				</div>
+				<div class="formRow">
+					<label form="lastContacted">Last Contacted</label>
+					<input name="lastContacted" id="lastContacted" type="date"></input>
+				</div>
+			</form>
+		</div>
+		<div id="contactList">
 		<table>
 			<thead>
 				<tr>
@@ -39,5 +77,7 @@
 			</tfoot>
 			<caption>Sales Leads</caption>
 		</table>
+		</div>
+		<div id="footer">&copy; 2016, Spherical </div>
 	</body>
 </html>

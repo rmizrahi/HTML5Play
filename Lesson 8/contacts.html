@@ -1,0 +1,86 @@
+<!DOCTYPE - html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>CRM</title>
+		<link rel="stylesheet" type="text/css" href="css/contacts.css"/>
+	</head>
+	<body>
+		<header>Contacts</header>
+		<main id="contactScreen">
+			<section id="contactDetails"><h2>Contact Details</h2>
+				<form method="post">
+					<div class="formRow">
+						<label for="contactName">Contact Name</label>
+						<input required autofocus autocomplete="off" name="contactName" id="contactName" class="validated" type="text" pattern=".{5,100}"> </input>
+					</div>
+					<div class="formRow">
+						<label for="phoneNumber">Phone Number</label>
+						<input required pattern="[0-9().\- ]{5,15}" placeholder="Include Area Code" name="phoneNumber" id="phoneNumber" type="tel" class="validated"></input>
+					</div>
+					<div class="formRow">
+						<label for="emailAddress">Email Address</label>
+						<input required name="emailAddress" id="emailAddress" type="email" class="validated"></input>
+					</div>
+					<div class="formRow">
+						<label for="companyName">Company Name</label>
+						<input required list="companies" name="companyName" id="companyName" class="validated">
+						<datalist id="companies">
+							<option value=""></option>
+							<option value="ABC Incorporated"></option>
+							<option value="XZY Ltd"></option>
+							<option value="ACME iInternational"></option>
+						</input>
+					</div>
+					<div class="formRow">
+						<label for="notes">Notes</label>
+						<textarea cols="40" rows="6" name="notes" class="validated" maxlength="1000"></textarea>
+					</div>
+					<div class="formRow">
+						<input style="width:70px" type="submit" value="Save"></input>
+					</div>
+					<div class="formRow">
+						<label form="lastContacted">Last Contacted</label>
+						<input name="lastContacted" id="lastContacted" type="date"></input>
+					</div>
+				</form>
+			</section>
+			<section id="contactList">
+				<table>
+					<thead>
+						<tr>
+							<th>Contact Name</th>
+							<th>Phone Number</th>
+							<th>Email Address</th>
+							<th>Company Name</th>
+							<th>Last Contacted</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>William Smith</td>
+							<td>555-642-7371</td>
+							<td>willam@testing.com</td>
+							<td>ACME Industries</td>
+							<td><time datetime="2014-10-21">21st October 2014</time></td>
+						</tr>
+						<tr>
+							<td>Bob Morris</td>
+							<td>555-999-2991</td>
+							<td>bob@testing.com</td>
+							<td>ABC Corp</td>
+							<td><time datetime="2014-09-12">12th September 2014</time></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5">2 contacts displayed</td>
+						</tr>
+					</tfoot>
+					<caption>Sales Leads</caption>
+				</table>
+			</section>
+		</main>
+		<footer>&copy; 2016, Spherical </footer>
+	</body>
+</html>
