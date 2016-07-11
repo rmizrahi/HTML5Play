@@ -1,0 +1,61 @@
+<!DOCTYPE - html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Lesson 7 TryIt</title>
+		<link rel="stylesheet" type="text/css" href="css/tryit.css"/>
+	</head>
+	<body>
+		<div id="header">Contacts</div>
+		<div id="contactDetails"><h2>Contact Details</h2>
+			<form method="post">
+				<div class="formRow">
+					<label for="fullName">Full Name</label>
+					<input required placeholder="Enter your full name" autofocus autocomplete="off" name="fullName" id="fullName" type="text" class="validated" pattern=.{7,50}"> </input>
+				</div>
+				<div class="formRow">
+					<label for="male">Male</label>
+					<input checked type="radio" name="gender" id="male" value="male">
+					<label for="female">Female</label>
+					<input type="radio" name="gender" id="female" value="females">
+				</div>
+				<div class="formRow">
+					<label for="optIn">Receive our newsletter!</label>
+					<input name="optIn" id="optIn" type="checkbox" checked></input>
+				</div>
+				<div class="formRow">
+					<label for="notes">Notes</label>
+					<textarea required cols="30" rows="5" name="notes" class="validated" maxlength="500"></textarea>
+				</div>
+				<div class="formRow">
+					<label for="DOB">Last Contacted</label>
+					<input name="DOB" id="DOB" type="date" class="validated"></input>
+				</div>
+				<div class="formRow">
+					<label for="salary">Salary</label>
+					<input type="number" name="salary" id="salary" step=500 min="20000" max="200000" class="validated"></input>
+				</div>
+				<div class="formRow">
+					<label for="phoneNumber">Phone Number</label>
+					<input placeholder="Include Area Code" name="phoneNumber" id="phoneNumber" type="tel" class="validated"></input>
+				</div>
+				<div class="formRow">
+					<label for="emailAddress">Email Address</label>
+					<input name="emailAddress" id="emailAddress" type="email" class="validated"></input>
+				</div>
+				<div class="formRow">
+					<label for="companyName">Company Name</label>
+					<input list="companies" name="companyName" id="companyName">
+					<datalist id="companies">
+						<option value="ABC Incorporated"></option>
+						<option value="XZY Ltd"></option>
+						<option value="ACME iInternational"></option>
+					</input>
+				</div>
+				<div class="formRow">
+					<input style="width:70px" type="submit" value="Submit"></input>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
